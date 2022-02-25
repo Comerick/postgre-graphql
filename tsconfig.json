@@ -5,11 +5,12 @@
     "module": "commonjs",
     "noImplicitReturns": true,
     "noUnusedLocals": false,
-    "outDir": "../dist",
+    "outDir": "dist",
     "rootDir": "src",
     "moduleResolution": "node",
     "baseUrl": "./src",
     "esModuleInterop": true,
+    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "strict": true,
@@ -20,6 +21,10 @@
     "resolveJsonModule": true
   },
   "compileOnSave": true,
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
   "include": [
     "src"
   ]

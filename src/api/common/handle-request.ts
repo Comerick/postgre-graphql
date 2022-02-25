@@ -25,7 +25,7 @@ export const handleRequest =
       const result = await promise
 
       res.send(result)
-    } catch (e) {
+    } catch (e: any) {
       const errorDetails = e
 
       const error = new HttpException(

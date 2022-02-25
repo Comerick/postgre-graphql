@@ -15,7 +15,7 @@ export async function validate<T extends Record<string, any>>(
     await validateOrReject(instance, { whitelist: true })
 
     return instance
-  } catch (e) {
+  } catch (e:any) {
     if (e instanceof ValidationError || e?.[0] instanceof ValidationError) {
       throw new HttpException(
         HttpStatus.BAD_REQUEST,
